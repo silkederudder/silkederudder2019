@@ -25,9 +25,9 @@ if (!spaceId || !accessToken) {
 
 module.exports = {
   siteMetadata: {
-    title: `My Awesome Blog`,
-    description: `An awesome blog displaying my awesome posts.`,
-    author: `Silke Derudder`,
+    title: `Silke Derudder`,
+    description: `Portfolio of Silke Derudder, a creative developer.`,
+    author: `@silkederudder`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -55,7 +55,21 @@ module.exports = {
     {
       resolve: `gatsby-source-contentful`,
       options: contentfulConfig
-    }
+    },
+    {
+      resolve: `gatsby-plugin-postcss`,
+      options: {
+        postCssPlugins: [
+          require(`postcss-preset-env`)({ stage: 0 }),
+          require(`stylelint`),
+          require(`postcss-reporter`)({ clearReportedMessages: true }),
+          require(`postcss-will-change`),
+          require(`postcss-color-function`),
+          require(`postcss-import`),
+          require(`postcss-cssnext`)
+        ],
+      },
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
