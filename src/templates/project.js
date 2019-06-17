@@ -12,9 +12,9 @@ class ProjectTemplate extends React.Component {
     const siteTitle = get(this.props, 'data.site.siteMetadata.title')
 
     return (
-      <Layout location={this.props.location}>
+      <Layout>
         <Helmet title={`${project.title} | ${siteTitle}`} />
-            <h2 className="section-headline">{project.title}</h2>
+        <h2 className="section-headline">{project.title}</h2>
       </Layout>
     )
   }

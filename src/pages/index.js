@@ -4,6 +4,7 @@ import Layout from "../components/layout";
 import Helmet from 'react-helmet'
 import get from 'lodash/get'
 import SEO from "../components/seo";
+import Img from "gatsby-image";
 
 class IndexPage extends React.Component {
   render() {
@@ -20,9 +21,13 @@ class IndexPage extends React.Component {
             {projects.map(({ node }) => {
               return (
                 <li key={node.slug}>
-                  <h3>
-                    <Link to={`/project/${node.slug}`}>{node.title}</Link>
-                  </h3>
+                    <Link to={`/project/${node.slug}`}>
+                      <p>{node.title}</p>
+                      <Img
+                        alt={node.title}
+                        fluid={node.image.fluid}
+                      />
+                    </Link>
                 </li>
               )
             })}
@@ -47,6 +52,19 @@ export const pageQuery = graphql`
         node {
           title
           slug
+          image {
+            file {
+              url
+            }
+            fluid(
+              maxWidth: 1800
+              maxHeight: 900
+              resizingBehavior: FILL
+              background: "rgb:000000"
+            ) {
+              ...GatsbyContentfulFluid_withWebp
+            }
+          }
         }
       }
     }
