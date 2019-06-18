@@ -13,26 +13,32 @@ class IndexPage extends React.Component {
 
     return (
       <Layout>
-        <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
-        <Helmet title={siteTitle} />
-  
-        <div className="projects">
+        <SEO title="Home" keywords={[`projects`, `silke derudder`, `design`, `development`, `contact`, `creative`, `portfolio`]} />
+        <Helmet title={` Projects`} />
+
+        <section>
+          <h2>Projects</h2>
           <ul>
             {projects.map(({ node }) => {
               return (
                 <li key={node.slug}>
                     <Link to={`/project/${node.slug}`}>
-                      <p>{node.title}</p>
-                      <Img
-                        alt={node.title}
-                        fluid={node.image.fluid}
-                      />
+                      <article>
+                        <div>
+                          <h3>{node.title}</h3>
+                          <p>{node.tags}</p>
+                        </div>
+                        <Img
+                          alt={node.title}
+                          fluid={node.coverImage.fluid}
+                        />
+                      </article>
                     </Link>
                 </li>
               )
             })}
           </ul>
-        </div>
+      </section>
       </Layout>
     )
   }
@@ -52,7 +58,8 @@ export const pageQuery = graphql`
         node {
           title
           slug
-          image {
+          tags
+          coverImage {
             file {
               url
             }

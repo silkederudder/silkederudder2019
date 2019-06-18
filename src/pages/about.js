@@ -13,8 +13,8 @@ class AboutPage extends React.Component {
 
     return (
       <Layout>
-        <SEO title="About" keywords={[`about`, `silke derudder`, `design`, `development`, `contact`, `creative`, `portfolio`]} />
-        <Helmet title={siteTitle} />
+        <SEO title="About" keywords={[`info`, `silke derudder`, `design`, `development`, `contact`, `creative`, `portfolio`]} />
+        <Helmet title='Info' />
         <section>
           <h2>Info</h2>
           <article>
