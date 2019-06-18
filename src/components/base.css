@@ -12,3 +12,7 @@ body {
   background: lightgrey;
   font-size: 1.6rem;
 }
+
+.wf-active body {
+  font-family: 'Droid Sans', Arial, Helvetica, sans-serif;
+}
