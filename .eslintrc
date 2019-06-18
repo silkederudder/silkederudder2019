@@ -1,6 +1,7 @@
 {
   "parser": "babel-eslint",
   "rules": {
+    "global-require": 0,
     "strict": 0
   },
   "extends": [

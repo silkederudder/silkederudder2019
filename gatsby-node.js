@@ -1,5 +1,4 @@
 const path = require("path");
-const slash = require(`slash`);
 
 require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`,
@@ -25,7 +24,6 @@ exports.createPages = async ({ graphql, actions }) => {
 
   const projectPages = projectData.data.allContentfulProject.edges.forEach(
     (projectPage) => {
-      console.log(projectPage);
       createPage({
         path: `/project/${projectPage.node.slug}/`,
         component: path.resolve('./src/templates/project.js'),
