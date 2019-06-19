@@ -5,6 +5,8 @@ import Helmet from 'react-helmet'
 import get from 'lodash/get'
 import SEO from "../components/seo";
 import Img from "gatsby-image";
+import styles from './index.module.css'
+import base from './base.module.css'
 
 class IndexPage extends React.Component {
   render() {
@@ -16,22 +18,19 @@ class IndexPage extends React.Component {
         <SEO title="Home" keywords={[`projects`, `silke derudder`, `design`, `development`, `contact`, `creative`, `portfolio`]} />
         <Helmet title={` Projects`} />
 
-        <section>
-          <h2>Projects</h2>
-          <ul>
+        <section className={styles.index}>
+          <h2 className={base.hide}>Projects</h2>
+          <ul className={styles.index__projects}>
             {projects.map(({ node }) => {
               return (
-                <li key={node.slug}>
-                    <Link to={`/project/${node.slug}`}>
-                      <article>
-                        <div>
-                          <h3>{node.title}</h3>
-                          <p>{node.tags}</p>
+                <li key={node.slug} className={styles.index__project}>
+                    <Link to={`/project/${node.slug}`} className={styles.index__projectLink}>
+                      <article className={styles.index__projectItem}>
+                        <div className={styles.index__projectInfo}>
+                          <h3 className={styles.projectTitle}>{node.title}</h3>
+                          <p className={styles.index__tags}>{node.tags}</p>
                         </div>
-                        <Img
-                          alt={node.title}
-                          fluid={node.coverImage.fluid}
-                        />
+                        <Img className={styles.index__projectImg} alt={node.title} fluid={node.coverImage.fluid} />
                       </article>
                     </Link>
                 </li>

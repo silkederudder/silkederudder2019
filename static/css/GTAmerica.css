@@ -1,0 +1,34 @@
+@font-face {
+  font-family: GTAmerica;
+  src: url(/fonts/GTAmerica/GTAmerica-Regular.woff2) format('woff2'), url(/fonts/GTAmerica/GTAmerica-Regular.woff) format('woff');
+  font-style: normal;
+  font-weight: 100;
+}
+
+@font-face {
+  font-family: GTAmericaExtended;
+  src: url(/fonts/GTAmerica/GTAmerica-ExtendedRegular.woff2) format('woff2'), url(/fonts/GTAmerica/GTAmerica-ExtendedRegular.woff) format('woff');
+  font-style: normal;
+  font-weight: 100;
+}
+
+@font-face {
+  font-family: GTAmericaExtended;
+  src: url(/fonts/GTAmerica/GTAmerica-ExtendedBlack.woff2) format('woff2'), url(/fonts/GTAmerica/GTAmerica-ExtendedBlack.woff) format('woff');
+  font-style: bold;
+  font-weight: 1000;
+}
+
+@font-face {
+  font-family: GTAmericaExpanded;
+  src: url(/fonts/GTAmerica/GTAmerica-ExpandedMedium.woff2) format('woff2'), url(/fonts/GTAmerica/GTAmerica-ExpandedMedium.woff) format('woff');
+  font-style: bold;
+  font-weight: 1000;
+}
+
+@font-face {
+  font-family: GTAmericaExpanded;
+  src: url(/fonts/GTAmerica/GTAmerica-ExpandedMedium.woff2) format('woff2'), url(/fonts/GTAmerica/GTAmerica-ExpandedMedium.woff) format('woff');
+  font-style: bold;
+  font-weight: 800;
+}

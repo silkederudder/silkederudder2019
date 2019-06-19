@@ -38,6 +38,13 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `src`,
+        path: `${__dirname}/src/`,
+      },
+    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
@@ -73,8 +80,9 @@ module.exports = {
     {
       resolve: `gatsby-plugin-web-font-loader`,
       options: {
-        google: {
-          families: [`Droid Sans`, `Droid Serif`]
+        custom: {
+          families: ['GTAmerica', 'GTAmericaExtended', 'GTAmericaExpanded'],
+          urls: ['/css/GTAmerica.css']
         }
       }
     },

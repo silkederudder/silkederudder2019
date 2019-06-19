@@ -5,6 +5,8 @@ import Helmet from 'react-helmet'
 import { graphql } from "gatsby";
 import get from 'lodash/get'
 import Img from "gatsby-image";
+import base from './base.module.css'
+import styles from './index.module.css'
 
 class AboutPage extends React.Component {
   render() {
@@ -15,26 +17,23 @@ class AboutPage extends React.Component {
       <Layout>
         <SEO title="About" keywords={[`info`, `silke derudder`, `design`, `development`, `contact`, `creative`, `portfolio`]} />
         <Helmet title='Info' />
-        <section>
-          <h2>Info</h2>
-          <article>
+        <section className={styles.info}>
+          <h2 className={base.hide}>Info</h2>
+          <article className={styles.info__about}>
             <h3>About</h3>
-            <Img
-              alt="Silke Derudder"
-              fluid={about.image.fluid}
-            />
-            <p>I&#39;m <span>Silke</span>, {about.body.body}</p>
+            <Img className={styles.info__img} alt="Silke Derudder" fluid={about.image.fluid} />
+            <p className={styles.info__text}>I&#39;m <span>Silke</span>, {about.body.body}</p>
           </article>
-          <article>
-            <h3>Get in touch</h3>
-            <p>Send me an <br/> <a href="mailto:hello@silkederudder.be">email</a></p>
-            <ul>
-              <li><a href="https://github.com/silkederudder">Github</a></li>
-              <li><a href="https://linkedin.com/silkederudder">LinkedIn</a></li>
-              <li><a href="https://www.behance.net/silkederudder">Behance</a></li>
-              <li><a href="https://twitter.com/silkederudder">Twitter</a></li>
-              <li><a href="https://instagram.com/silkederudder">Instagram</a></li>
-              <li><a href="https://dribbble.com/silkederudder">Dribble</a></li>
+          <article className={styles.info__contact}>
+            <h3 className={base.hide}>Get in touch</h3>
+            <p className={styles.info__mail}>Send me an <br/> <a href="mailto:hello@silkederudder.be">email</a></p>
+            <ul className={styles.info__socials}>
+              <li className={styles.info__socialItem}><a className={base.link} href="https://github.com/silkederudder">Github</a></li>
+              <li className={styles.info__socialItem}><a className={base.link} href="https://linkedin.com/silkederudder">LinkedIn</a></li>
+              <li className={styles.info__socialItem}><a className={base.link} href="https://www.behance.net/silkederudder">Behance</a></li>
+              <li className={styles.info__socialItem}><a className={base.link} href="https://twitter.com/silkederudder">Twitter</a></li>
+              <li className={styles.info__socialItem}><a className={base.link} href="https://instagram.com/silkederudder">Instagram</a></li>
+              <li className={styles.info__socialItem}><a className={base.link} href="">Resume</a></li>
             </ul>
           </article>
         </section>
