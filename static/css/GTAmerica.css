@@ -23,12 +23,12 @@
   font-family: GTAmericaExpanded;
   src: url(/fonts/GTAmerica/GTAmerica-ExpandedMedium.woff2) format('woff2'), url(/fonts/GTAmerica/GTAmerica-ExpandedMedium.woff) format('woff');
   font-style: bold;
-  font-weight: 1000;
+  font-weight: 800;
 }
 
 @font-face {
   font-family: GTAmericaExpandedBlack;
   src: url(/fonts/GTAmerica/GTAmerica-ExpandedBlack.woff2) format('woff2'), url(/fonts/GTAmerica/GTAmerica-ExpandedBlack.woff) format('woff');
   font-style: bold;
-  font-weight: 800;
+  font-weight: 1000;
 }

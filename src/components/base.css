@@ -31,10 +31,18 @@ a {
   margin: 4rem;
 }
 
+.header__nav--active {
+  opacity: 1;
+}
+
 .info__img {
   display: none;
   max-width: 38.4rem;
   max-height: auto;
   height: auto;
   width: 118.5rem;
+}
+
+.index__projectImg {
+  filter: brightness(75%);
 }
