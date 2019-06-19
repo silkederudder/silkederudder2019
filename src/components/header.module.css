@@ -1,6 +1,31 @@
+@import 'base';
+
 .header {
-  
-  &__title {
-    color: #fff469;
-  }
+  display: flex;
+  justify-content: space-between;
+  font-family: GTAmericaExpanded;
+  margin-bottom: 8rem;
+  font-size: 2.5rem;
+}
+
+.header__title {
+  text-transform: uppercase;
+}
+
+.header__title a {
+  color: var(--accent);
+}
+
+.header__list {
+  display: flex;
+  flex-direction: row;
+}
+
+.header__link {
+  margin-left: 2rem;
+  opacity: .5;
+}
+
+.header__link:hover {
+  opacity: .8;
 }

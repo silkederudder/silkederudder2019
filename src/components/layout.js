@@ -10,10 +10,10 @@ const Layout = ({children}) => (
   <StaticQuery query={pageQuery}
     
     render={data => (
-      <>
+      <div className="wrapper">
         <Header siteTitle={data.site.siteMetadata.title} />
         <main className={styles.main}>{children}</main>
-      </>
+      </div>
     )}
   />
 );

@@ -13,7 +13,7 @@
 }
 
 @font-face {
-  font-family: GTAmericaExtended;
+  font-family: GTAmericaExtendedBlack;
   src: url(/fonts/GTAmerica/GTAmerica-ExtendedBlack.woff2) format('woff2'), url(/fonts/GTAmerica/GTAmerica-ExtendedBlack.woff) format('woff');
   font-style: bold;
   font-weight: 1000;
@@ -27,8 +27,8 @@
 }
 
 @font-face {
-  font-family: GTAmericaExpanded;
-  src: url(/fonts/GTAmerica/GTAmerica-ExpandedMedium.woff2) format('woff2'), url(/fonts/GTAmerica/GTAmerica-ExpandedMedium.woff) format('woff');
+  font-family: GTAmericaExpandedBlack;
+  src: url(/fonts/GTAmerica/GTAmerica-ExpandedBlack.woff2) format('woff2'), url(/fonts/GTAmerica/GTAmerica-ExpandedBlack.woff) format('woff');
   font-style: bold;
   font-weight: 800;
 }

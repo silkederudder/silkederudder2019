@@ -18,9 +18,23 @@ body {
   color: white;
   font-size: 1.8rem;
   font-family: GTAmerica, Arial, Helvetica, sans-serif;
+  margin: 0 auto;
+  max-width: 160rem;
 }
 
 a {
   text-decoration: none;
   color: white;
+}
+
+.wrapper {
+  margin: 4rem;
+}
+
+.info__img {
+  display: none;
+  max-width: 38.4rem;
+  max-height: auto;
+  height: auto;
+  width: 118.5rem;
 }

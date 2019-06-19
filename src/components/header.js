@@ -6,7 +6,7 @@ import styles from './header.module.css'
 const Header = ({ siteTitle }) => (
   <header className={styles.header}>
     <h1 className={styles.header__title}><Link to='/'>{siteTitle}</Link></h1>
-    <nav className={styles.header__navigation}>
+    <nav className={styles.header__nav}>
       <ul className={styles.header__list}>
         <li className={styles.header__listitem}><Link className={styles.header__link} to="/">Projects</Link></li>
         <li className={styles.header__listitem}><Link className={styles.header__link} to="/about">Info</Link></li>

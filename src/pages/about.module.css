@@ -1,0 +1,46 @@
+.info {
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 18.5rem);
+  justify-content: space-around;
+}
+
+.info__about {
+  max-width: 83.4rem;
+}
+
+.info__name {
+  color: transparent;
+  -webkit-text-stroke: 1.5px white;
+}
+
+.info__text {
+  font-family: GTAmericaExtended;
+  font-size: 4.5rem;
+  line-height: 5.4rem;
+}
+
+.info__contact {
+  display: flex;
+  max-width: 67.3rem;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.info__mail {
+  font-size: 5.2rem;
+  line-height: 6.2rem;
+}
+
+.info__mail a {
+  border-bottom: .16rem solid white;
+  display: inline;
+}
+
+.info__socials {
+  font-size: 2.4rem;
+  line-height: 3.5rem;
+  display: flex;
+  width: 22.1rem;
+  justify-content: space-between;
+}
