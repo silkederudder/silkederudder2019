@@ -4,7 +4,7 @@ import React from "react";
 import styles from './header.module.css'
 
 const Header = ({ siteTitle }) => (
-  <header className="header">
+  <header className={styles.header}>
     <h1 className={styles.header__title}><Link to='/'>{siteTitle}</Link></h1>
     <nav className={styles.header__navigation}>
       <ul className={styles.header__list}>

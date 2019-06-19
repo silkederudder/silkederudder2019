@@ -67,7 +67,11 @@ module.exports = {
       resolve: `gatsby-plugin-postcss`,
       options: {
         postCssPlugins: [
-          require(`postcss-preset-env`)({ stage: 0 }),
+          require(`postcss-preset-env`)({ 
+            stage: 2,
+            features: {
+              'nesting-rules': true
+            }}),
           require(`stylelint`),
           require(`postcss-reporter`)({ clearReportedMessages: true }),
           require(`postcss-will-change`),
