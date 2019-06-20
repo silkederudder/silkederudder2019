@@ -1,4 +1,4 @@
-import React from "react"
+import React, { createRef } from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Helmet from 'react-helmet'
@@ -8,13 +8,32 @@ import Img from "gatsby-image";
 import base from './base.module.css'
 import styles from './about.module.css'
 
+let img;
+const imgStyle = {
+  position: `absolute`,
+  overflow: `hidden`,
+}
+
 const handleShowImg = e => {
-  
+  const $img = img.current.imageRef.current.offsetParent;
+  const w = 115;
+  const h = 54;
+
+  $img.style.position = `absolute`;
+  $img.style.left = `${e.pageX / w}rem`;
+  $img.style.top = `${e.pageY / h}rem`;
+  $img.style.opacity = `.8`;
+}
+
+const handleHideImage = e => {
+  const $img = img.current.imageRef.current.offsetParent;
+  $img.style.opacity = `0`;
 }
 
 const AboutPage = (props) => {
   const siteTitle = get(props, 'data.site.siteMetadata.title')
   const about = get(props, 'data.allContentfulPerson.edges')[0].node
+  img = createRef();
 
   return (
     <Layout>
@@ -24,8 +43,8 @@ const AboutPage = (props) => {
         <h2 className={base.hide}>Info</h2>
         <article className={styles.info__about}>
           <h3 className={base.hide}>About</h3>
-          <Img className="info__img" alt="Silke Derudder" fluid={about.image.fluid} />
-          <p className={styles.info__text}>I&#39;m <span className={styles.info__name} onMouseMove={handleShowImg}>Silke</span>, {about.body.body}</p>
+          <Img className="info__img" alt="Silke Derudder" fluid={about.image.fluid} ref={img} style={imgStyle}/>
+          <p className={styles.info__text}>I&#39;m <span className={styles.info__name} onMouseMove={handleShowImg} onMouseLeave={handleHideImage}>Silke</span>, {about.body.body}</p>
         </article>
         <article className={styles.info__contact}>
           <h3 className={base.hide}>Get in touch</h3>

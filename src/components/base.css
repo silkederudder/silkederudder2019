@@ -40,8 +40,12 @@ a {
   max-height: auto;
   height: auto;
   width: 118.5rem;
-  position: absolute;
-  opacity: .5;
+  opacity: 0;
+  z-index: -10;
+}
+
+.info__img, .info__img > * {
+  transform: translateX(50%);
 }
 
 .index__projectImg {
