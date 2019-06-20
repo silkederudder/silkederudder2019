@@ -36,11 +36,12 @@ a {
 }
 
 .info__img {
-  display: none;
   max-width: 38.4rem;
   max-height: auto;
   height: auto;
   width: 118.5rem;
+  position: absolute;
+  opacity: .5;
 }
 
 .index__projectImg {
