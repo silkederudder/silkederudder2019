@@ -16,12 +16,7 @@ const imgStyle = {
 
 const handleShowImg = e => {
   const $img = img.current.imageRef.current.offsetParent;
-  const w = 115;
-  const h = 54;
-
-  $img.style.position = `absolute`;
-  $img.style.left = `${e.pageX / w}rem`;
-  $img.style.top = `${e.pageY / h}rem`;
+  $img.style.transform = `translate3d(calc(${e.pageX}px - 50%), calc(${e.pageY}px - 50%), 0)`;
   $img.style.opacity = `.8`;
 }
 

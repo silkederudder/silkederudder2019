@@ -45,13 +45,11 @@
 }
 
 .index__projectItem {
-  /* transform: scale(1); */
   transform-origin: center;
   transition: all 1s cubic-bezier(.075, .82, .165, 1);
 }
 
 .index__projectLink:hover .index__projectItem {
-  /* transform: scale(.9); */
   transition: all 1s cubic-bezier(.075, .82, .165, 1);
 }
 

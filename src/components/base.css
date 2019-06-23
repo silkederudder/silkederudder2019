@@ -1,6 +1,7 @@
 :root {
   --background: black;
   --accent: #fff469;
+  --grey: #7f7f7f;
 }
 
 html {
@@ -14,7 +15,7 @@ html {
 }
 
 body {
-  background: black;
+  background: var(--background);
   color: white;
   font-size: 1.8rem;
   font-family: GTAmerica, Arial, Helvetica, sans-serif;
@@ -40,8 +41,11 @@ a {
   max-height: auto;
   height: auto;
   width: 118.5rem;
-  opacity: 0;
+  top: 0;
+  left: 0;
+  opacity: .3;
   z-index: -10;
+  transition: transform 1s cubic-bezier(.075, .82, .165, 1);
 }
 
 .info__img, .info__img > * {
