@@ -1,0 +1,111 @@
+.detail, .close__center, .close__right {
+  padding: 0 5.2rem;
+}
+
+.detail__link, .detail__tags {
+  font-family: GTAmericaExtended;
+  opacity: .5;
+}
+
+.close__right, .close__center {
+  width: 100%;
+  display: flex;
+}
+
+.close__right {
+  justify-content: flex-end;
+}
+
+.close__center {
+  justify-content: center;
+}
+
+.detail__link {
+  border-bottom: .1rem solid white;
+  padding-bottom: .3rem;
+}
+
+.detail__title {
+  font-family: GTAmericaExpandedBlack;
+  font-weight: bold;
+  line-height: 6.2rem;
+  font-size: 5rem;
+  margin-bottom: .5rem;
+}
+
+.detail__header {
+  margin: 4.9rem 0 6.1rem;
+}
+
+.detail__intro {
+  font-family: GTAmericaExtended;
+  font-size: 3rem;
+  line-height: 5.4rem;
+  margin-bottom: 4.9rem;
+}
+
+.detail__infoList {
+  display: flex;
+  justify-content: space-between;
+  width: 61%;
+}
+
+.detail__infoItem {
+  max-width: 14.5rem;
+}
+
+.detail__info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.detail__projectLink {
+  font-family: GTAmericaExtended;
+  border: .2 solid white;
+  width: 39%;
+  height: 1.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.detail__projectLink::after {
+  content: '';
+  display: block;
+  background: url(../images/arrow.svg) no-repeat;
+  width: 3.2rem;
+  height: 1.4rem;
+  margin-left: 1.2rem;
+}
+
+.detail__heading {
+  font-family: GTAmericaExtended;
+  opacity: .5;
+  font-size: 1.4rem;
+  margin-bottom: .8rem;
+}
+
+.detail__subtitle {
+  font-size: 2rem;
+  font-family: GTAmericaExpanded;
+  opacity: .5;
+  grid-area: title;
+}
+
+.detail__content {
+  display: grid;
+  grid-template-areas: 'title body';
+  grid-template-columns: 35% 65%;
+  width: 100%;
+}
+
+.detail__content .text {
+  grid-area: body;
+}
+
+.detail__video {
+  width: 100%;
+  height: auto;
+}
+

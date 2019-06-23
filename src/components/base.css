@@ -17,7 +17,7 @@ html {
 body {
   background: var(--background);
   color: white;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   font-family: GTAmerica, Arial, Helvetica, sans-serif;
   margin: 0 auto;
   max-width: 160rem;
@@ -43,7 +43,7 @@ a {
   width: 118.5rem;
   top: 0;
   left: 0;
-  opacity: .3;
+  opacity: 0;
   z-index: -10;
   transition: transform 1s cubic-bezier(.075, .82, .165, 1);
 }
@@ -54,4 +54,9 @@ a {
 
 .index__projectImg {
   filter: brightness(75%);
+}
+
+.detail__coverImg {
+  width: 100%;
+  height: auto;
 }

@@ -36,8 +36,13 @@
   line-height: 6.2rem;
 }
 
+.info__mail a:hover {
+  border-bottom: .2rem solid white;
+  transition: .2s all;
+}
+
 .info__mail a {
-  border-bottom: .16rem solid;
+  border-bottom: .2rem solid #7f7f7f;
   display: inline;
 }
 
@@ -47,4 +52,11 @@
   display: flex;
   width: 22.1rem;
   justify-content: space-between;
+}
+
+@media only screen and (max-width: 760px) {
+
+  .info {
+    /* background: red; */
+  }
 }

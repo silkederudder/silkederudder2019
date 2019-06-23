@@ -3,7 +3,8 @@
 }
 
 .text {
-  font-size: 1.8rem;
+  font-size: 1.6rem;
+  line-height: 2.2rem;
   color: white;
   font-family: GTAmerica, Arial, Helvetica, sans-serif;
 }
