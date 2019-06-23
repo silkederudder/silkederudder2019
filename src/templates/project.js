@@ -46,7 +46,7 @@ class ProjectTemplate extends React.Component {
                   <dd className={base.text}>{project.year}</dd>
                 </div>
               </dl>
-              <a className={styles.detail__projectLink} href={project.url}>Check this out</a>
+              <a className={styles.detail__projectLink} target="blank" href={project.url}>Check this out</a>
             </div>
           </article>
           <article className={styles.detail__body}>

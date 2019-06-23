@@ -1,5 +1,5 @@
 .detail, .close__center, .close__right {
-  padding: 0 5.2rem;
+  padding: 0 10rem;
 }
 
 .detail__link, .detail__tags {
@@ -18,6 +18,7 @@
 
 .close__center {
   justify-content: center;
+  margin-top: 4rem;
 }
 
 .detail__link {
@@ -109,3 +110,12 @@
   height: auto;
 }
 
+.detail__body {
+  margin-bottom: 9.8rem;
+}
+
+.detail__images {
+  height: 22.5rem;
+  background: grey;
+  margin-bottom: 9.8rem;
+}

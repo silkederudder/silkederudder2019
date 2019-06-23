@@ -5,7 +5,7 @@
   justify-content: space-between;
   font-family: GTAmericaExpanded;
   margin-bottom: 8rem;
-  font-size: 2.5rem;
+  font-size: 2.2rem;
 }
 
 .header__title {
@@ -22,7 +22,7 @@
 }
 
 .header__link {
-  margin-left: 3.5rem;
+  margin-left: 4rem;
   opacity: .5;
 }
 

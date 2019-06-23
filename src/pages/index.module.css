@@ -7,7 +7,7 @@
 
 .index__project {
   width: calc((99vw - 8rem) / 2);
-  max-width: 75rem;
+  max-width: 65rem;
   height: auto;
   position: relative;
 }
@@ -62,5 +62,5 @@
 
 .index__projectTitle {
   font-family: GTAmericaExpandedBlack;
-  font-size: 3rem;
+  font-size: 2.8rem;
 }
