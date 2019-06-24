@@ -1,0 +1,50 @@
+.notfound {
+  height: calc(100vh - 18.5rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.notfound__img {
+  width: 30rem;
+  height: auto;
+  margin-bottom: -4rem;
+}
+
+.notfound__content {
+  text-align: center;
+}
+
+.notfound__title {
+  font-family: GTAmericaExtendedBlack;
+  font-size: 10rem;
+  color: transparent;
+  -webkit-text-stroke: 1.5px white;
+  margin: 10rem 0 5rem;
+}
+
+.notfound__text {
+  font-family: GTAmericaExtended;
+  font-size: 3rem;
+  opacity: .5;
+}
+
+.notfound__link {
+  font-family: GTAmericaExtended;
+  border: .2 solid white;
+  height: 1.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5rem;
+}
+
+.notfound__link::after {
+  content: '';
+  display: block;
+  background: url(../images/arrow.svg) no-repeat;
+  width: 3.2rem;
+  height: 1.4rem;
+  margin-left: 1.2rem;
+}
