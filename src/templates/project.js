@@ -4,6 +4,7 @@ import { graphql, Link } from "gatsby";
 import get from 'lodash/get'
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import BlockText from "../blocks/blockText"
 import Img from "gatsby-image";
 import styles from './project.module.css'
 import base from '../pages/base.module.css'
@@ -12,6 +13,7 @@ class ProjectTemplate extends React.Component {
   render() {
     const project = get(this.props, 'data.contentfulProject')
     const siteTitle = get(this.props, 'data.site.siteMetadata.title')
+    const blocks = get(this.props, 'data.allContentfulBlock.edges')
 
     return (
       <Layout>
@@ -57,23 +59,15 @@ class ProjectTemplate extends React.Component {
                     <source src={`https:${project.caseMovie.file.url}`} title={project.caseMovie.title} type={project.caseMovie.file.contentType}/>
                   </video> 
                   : 
-                  <Img className="detail__coverImg" alt={project.title} fluid={project.coverImage.fluid}/> 
+                  <Img className="detail__coverImg" alt={project.title} fluid={project.coverImage.fluid}/>
               }
             </header>
             <div className={styles.detail__content}>
               <h3 className={styles.detail__subtitle}>The challenge</h3>
-              <p className={base.text}>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Libero illum officiis voluptatem delectus corporis expedita numquam alias natus est, quis, exercitationem minima hic quam, nostrum magni ipsam. Nobis, iste magni.</p>
+              <p className={base.text}>{project.challenge.challenge}</p>
             </div>
           </article>
-          <article className={styles.detail__body}>
-            <header className={styles.detail__images}>
-              {/* IMAGES */}
-            </header>
-            <div className={styles.detail__content}>
-              <h3 className={styles.detail__subtitle}>Concept</h3>
-              <p className={base.text}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente maiores, numquam necessitatibus incidunt autem porro nulla distinctio eum, consequatur explicabo molestias illo nemo dolores magni! Porro error fugiat quod debitis?</p>
-            </div>
-          </article>
+           { blocks.map((block, i) => <BlockText key={i} id={block.node}/>) }
         </section>
         <section className={styles.close__center}>
           <Link to="/" className={styles.detail__link}>Close project</Link>
@@ -103,6 +97,9 @@ export const pageQuery = graphql`
       role
       year
       url
+      challenge {
+        challenge
+      }
       coverImage {
         file {
           url
@@ -122,6 +119,32 @@ export const pageQuery = graphql`
           contentType
           fileName
           url
+        }
+      }
+    }
+
+    allContentfulBlock(filter: {project: {slug: {eq: $slug}}}) {
+      edges {
+        node {
+          id
+          title
+          body {
+            body
+          }
+          images {
+            title
+            file {
+              url
+            }
+            fluid(
+              maxWidth: 1800
+              maxHeight: 1200
+              resizingBehavior: FILL
+              background: "rgb:000000"
+            ) {
+              ...GatsbyContentfulFluid_withWebp
+            }
+          }
         }
       }
     }

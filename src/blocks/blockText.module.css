@@ -1,0 +1,28 @@
+.blocktext__body {
+  display: grid;
+  grid-template-areas: 'title body';
+  grid-template-columns: 35% 65%;
+  width: 100%;
+  margin-bottom: 9.8rem;
+}
+
+.blocktext__title {
+  grid-area: title;
+  font-size: 2rem;
+  font-family: GTAmericaExpanded;
+  opacity: .5;
+}
+
+.blocktext__body .text {
+  grid-area: body;
+}
+
+.blocktext__images {
+  margin-bottom: 9.8rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.blocktext__img {
+  border: 1rem solid red;
+}
