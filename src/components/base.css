@@ -24,7 +24,7 @@ body {
 }
 
 .wf-active {
-  font-family: GTAmerica;
+  font-family: GTAmerica, Arial, Helvetica, sans-serif;
 }
 
 a {
@@ -49,7 +49,7 @@ a {
   left: 0;
   opacity: 0;
   z-index: -10;
-  transition: transform 1s cubic-bezier(.075, .82, .165, 1);
+  transition: transform 1s cubic-bezier(.08, .82, .17, 1);
 }
 
 .info__img, .info__img > * {
@@ -68,4 +68,22 @@ a {
 .blocktext__img {
   width: calc(49%);
   height: auto;
+}
+
+@media only screen and (max-width: 900px) {
+
+  .info__img {
+    opacity: 1;
+    transform: unset;
+    max-width: 28.4rem;
+    margin-bottom: 3rem;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+
+  .blocktext__img {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
 }

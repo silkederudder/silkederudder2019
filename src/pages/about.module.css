@@ -17,7 +17,7 @@
 }
 
 .info__name:hover {
-  cursor: url("../images/hand.png"), auto;
+  cursor: url(../images/hand.png), auto;
 }
 
 .info__text {
@@ -56,9 +56,14 @@
   justify-content: space-between;
 }
 
-@media only screen and (max-width: 760px) {
+@media only screen and (max-width: 900px) {
 
   .info {
-    /* background: red; */
+    height: auto;
+    display: block;
+  }
+
+  .info__text {
+    margin-bottom: 10rem;
   }
 }

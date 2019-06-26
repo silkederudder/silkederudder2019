@@ -7,6 +7,7 @@ import get from 'lodash/get'
 import Img from "gatsby-image";
 import base from './base.module.css'
 import styles from './about.module.css'
+import Media from 'react-media';
 
 let img;
 const imgStyle = {
@@ -14,7 +15,13 @@ const imgStyle = {
   overflow: `hidden`,
 }
 
+const resetStyle = {
+  transform: `none`,
+  opacity: `1`,
+} 
+
 const handleShowImg = e => {
+  
   const $img = img.current.imageRef.current.offsetParent;
   $img.style.transform = `translate3d(calc(${e.pageX}px - 50%), calc(${e.pageY}px - 50%), 0)`;
   $img.style.opacity = `.8`;
@@ -32,14 +39,28 @@ const AboutPage = (props) => {
 
   return (
     <Layout>
-      <SEO title="About" keywords={[`info`, `silke derudder`, `design`, `development`, `contact`, `creative`, `portfolio`]} />
+      <SEO title="About" keywords={[`info`, `@ derudder`, `design`, `development`, `contact`, `creative`, `portfolio`]} />
       <Helmet title='Info' />
       <section className={styles.info}>
         <h2 className={base.hide}>Info</h2>
+
         <article className={styles.info__about}>
           <h3 className={base.hide}>About</h3>
-          <Img className="info__img" alt="Silke Derudder" fluid={about.image.fluid} ref={img} style={imgStyle}/>
-          <p className={styles.info__text}>I&#39;m <span className={styles.info__name} onMouseMove={handleShowImg} onMouseLeave={handleHideImage}>Silke</span>, {about.body.body}</p>
+          <Media query="(max-width: 900px)">
+            {matches =>
+              matches ? (
+                <>
+                  <Img className="info__img" alt="Silke Derudder" fluid={about.image.fluid} ref={img} style={resetStyle}/>
+                  <p className={styles.info__text}>I&#39;m <span className={styles.info__name}>Silke</span>, {about.body.body}</p>
+                </>
+              ) : (
+                <>
+                  <Img className="info__img" alt="Silke Derudder" fluid={about.image.fluid} ref={img} style={imgStyle}/>
+                  <p className={styles.info__text}>I&#39;m <span className={styles.info__name} onMouseMove={handleShowImg} onMouseLeave={handleHideImage}>Silke</span>, {about.body.body}</p>
+                </>
+              )
+            }
+          </Media>
         </article>
         <article className={styles.info__contact}>
           <h3 className={base.hide}>Get in touch</h3>

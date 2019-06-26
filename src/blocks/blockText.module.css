@@ -23,6 +23,19 @@
   justify-content: space-between;
 }
 
-.blocktext__img {
-  border: 1rem solid red;
+@media only screen and (max-width: 900px) {
+
+  .blocktext__body {
+    display: block;
+    margin-bottom: 5rem;
+  }
+
+  .blocktext__title {
+    margin-bottom: 2rem;
+  }
+
+  .blocktext__images {
+    margin-bottom: 5rem;
+    display: block;
+  }
 }

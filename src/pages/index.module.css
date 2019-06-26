@@ -46,11 +46,11 @@
 
 .index__projectItem {
   transform-origin: center;
-  transition: all 1s cubic-bezier(.075, .82, .165, 1);
+  transition: all 1s cubic-bezier(.08, .82, .17, 1);
 }
 
 .index__projectLink:hover .index__projectItem {
-  transition: all 1s cubic-bezier(.075, .82, .165, 1);
+  transition: all 1s cubic-bezier(.08, .82, .17, 1);
 }
 
 .index__tags {
@@ -63,4 +63,13 @@
 .index__projectTitle {
   font-family: GTAmericaExpandedBlack;
   font-size: 2.8rem;
+}
+
+@media only screen and (max-width: 900px) {
+
+  .index__project {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 2rem;
+  }
 }

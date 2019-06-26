@@ -1,7 +1,3 @@
-.detail, .close__center, .close__right {
-  padding: 0 10rem;
-}
-
 .detail__link, .detail__tags {
   font-family: GTAmericaExtended;
   opacity: .5;
@@ -112,4 +108,40 @@
 
 .detail__body {
   margin-bottom: 9.8rem;
+}
+
+@media only screen and (max-width: 900px) {
+
+  .detail__info {
+    display: block;
+  }
+
+  .detail__infoList {
+    width: 80%;
+    margin-bottom: 5rem;
+  }
+
+  .detail__projectLink {
+    width: auto;
+    justify-content: flex-start;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+
+  .detail__infoList {
+    width: 100%;
+  }
+
+  .detail__content {
+    display: block;
+  }
+
+  .detail__subtitle {
+    margin-bottom: 2rem;
+  }
+
+  .detail__body {
+    margin-bottom: 5rem;
+  }
 }
