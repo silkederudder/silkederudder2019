@@ -48,14 +48,16 @@ class ProjectTemplate extends React.Component {
                   <dd className={base.text}>{project.year}</dd>
                 </div>
               </dl>
-              <a className={styles.detail__projectLink} target="blank" href={project.url}>Check this out</a>
+              {
+                project.url === "" ? <a className={styles.detail__projectLink} target="blank" href={project.url}>Check this out</a> : ""
+              }
             </div>
           </article>
           <article className={styles.detail__body}>
             <header className={styles.detail__header}>
-              { 
+              {
                 project.caseMovie !== null ? 
-                  <video width="1920" height="1080" controls className={styles.detail__video}>
+                  <video width="1920" height="1080" controls className={styles.detail__video} poster={project.videoPoster.file.url}>
                     <source src={`https:${project.caseMovie.file.url}`} title={project.caseMovie.title} type={project.caseMovie.file.contentType}/>
                   </video> 
                   : 
@@ -118,6 +120,11 @@ export const pageQuery = graphql`
         file {
           contentType
           fileName
+          url
+        }
+      }
+      videoPoster {
+        file {
           url
         }
       }
