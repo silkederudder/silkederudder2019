@@ -67,3 +67,39 @@
     margin-bottom: 10rem;
   }
 }
+
+@media only screen and (max-width: 760px) {
+
+  .info__text {
+    font-size: 3.5rem;
+    line-height: 4.4rem;
+  }
+
+  .info__mail {
+    font-size: 3.2rem;
+    line-height: 4.2rem;
+  }
+
+  .info__socials {
+    font-size: 1.6rem;
+    line-height: 2rem;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+
+  .info__text {
+    font-size: 3.5rem;
+    line-height: 4.4rem;
+  }
+
+  .info__mail {
+    font-size: 3.2rem;
+    line-height: 4.2rem;
+    margin-bottom: 4rem;
+  }
+
+  .info__contact {
+    display: block;
+  }
+}

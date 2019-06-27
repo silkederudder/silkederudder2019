@@ -12,3 +12,7 @@
 .link:hover {
   text-decoration: underline;
 }
+
+@media only screen and (max-width: 760px) {
+  
+}

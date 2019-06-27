@@ -87,3 +87,12 @@ a {
     margin-bottom: 2rem;
   }
 }
+
+@media only screen and (max-width: 400px) {
+
+  .wrapper {
+    padding: 2rem 1.5rem;
+  }
+}
+
+

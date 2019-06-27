@@ -3,6 +3,7 @@
 .header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   font-family: GTAmericaExpanded;
   margin-bottom: 8rem;
   font-size: 2.2rem;
@@ -28,4 +29,22 @@
 
 .header__link:hover {
   opacity: .7;
+}
+
+@media only screen and (max-width: 760px) {
+
+  .header {
+    font-size: 1.9rem;
+  }
+
+  .header__link {
+    margin-left: 2rem;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+
+  .header {
+    font-size: 1.4rem;
+  }
 }
