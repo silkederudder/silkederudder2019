@@ -49,7 +49,7 @@ class ProjectTemplate extends React.Component {
                 </div>
               </dl>
               {
-                project.url === "" ? <a className={styles.detail__projectLink} target="blank" href={project.url}>Check this out</a> : ""
+                project.url !== null ? <a className={styles.detail__projectLink} target="blank" href={project.url}>Check this out</a> : ""
               }
             </div>
           </article>

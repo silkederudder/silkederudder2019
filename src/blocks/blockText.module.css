@@ -21,6 +21,7 @@
   margin-bottom: 9.8rem;
   display: flex;
   justify-content: space-between;
+  width: 100%;
 }
 
 @media only screen and (max-width: 900px) {
@@ -36,6 +37,12 @@
 
   .blocktext__images {
     margin-bottom: 5rem;
+  }
+}
+
+@media only screen and (max-width: 760px) {
+
+  .blocktext__images {
     display: block;
   }
 }

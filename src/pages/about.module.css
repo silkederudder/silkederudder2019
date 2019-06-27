@@ -66,6 +66,10 @@
   .info__text {
     margin-bottom: 10rem;
   }
+
+  .info__about {
+    max-width: 100%;
+  }
 }
 
 @media only screen and (max-width: 760px) {
@@ -82,20 +86,27 @@
 
   .info__socials {
     font-size: 1.6rem;
-    line-height: 2rem;
+    line-height: 2.2rem;
+    margin-bottom: 2rem;
   }
 }
 
 @media only screen and (max-width: 500px) {
 
   .info__text {
-    font-size: 3.5rem;
-    line-height: 4.4rem;
+    font-size: 2.8rem;
+    line-height: 3.8rem;
+    margin-bottom: 5rem;
+  }
+
+  .info__name {
+    color: transparent;
+    -webkit-text-stroke: 1px white;
   }
 
   .info__mail {
-    font-size: 3.2rem;
-    line-height: 4.2rem;
+    font-size: 2.8rem;
+    line-height: 3.6rem;
     margin-bottom: 4rem;
   }
 

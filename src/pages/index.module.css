@@ -55,7 +55,7 @@
 
 .index__tags {
   font-family: GTAmericaExtended;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   order: -1;
   margin-bottom: 1rem;
 }
@@ -71,5 +71,28 @@
     width: 100%;
     max-width: 100%;
     margin-bottom: 2rem;
+  }
+}
+
+@media only screen and (max-width: 760px) {
+
+  .index__projectTitle {
+    font-size: 2.5rem;
+  }
+
+  .index__tags {
+    font-size: 1.3rem;
+    margin-bottom: .8rem;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+
+  .index__projectTitle {
+    font-size: 2rem;
+  }
+
+  .index__tags {
+    display: none;
   }
 }
