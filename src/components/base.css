@@ -70,6 +70,18 @@ a {
   height: auto;
 }
 
+.tl-wrapper-status--entered main {
+  transition: all .3s;
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.tl-wrapper-status--entering main, .tl-wrapper-status--exiting main {
+  transition: all .3s;
+  transform: translateY(10rem);
+  opacity: 0;
+}
+
 @media only screen and (max-width: 900px) {
 
   .info__img {
