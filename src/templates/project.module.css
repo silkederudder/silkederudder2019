@@ -66,7 +66,7 @@
 
 .detail__projectLink {
   font-family: GTAmericaExtended;
-  width: 25%;
+  width: 22%;
   border: .1rem solid var(--grey);
   padding: 2rem;
   height: 1.4rem;
@@ -89,7 +89,7 @@
 .detail__projectLink:hover {
   transition: .2s all;
   border: .1rem solid white;
-  padding: 2rem 0 2rem calc((25% / 2) - (12.64rem / 2));
+  padding: 2rem 0 2rem calc((22% / 2) - (12.64rem / 2));
 }
 
 .detail__projectLink:hover::after {
@@ -135,17 +135,40 @@
   margin-bottom: 9.8rem;
 }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 1100px) {
+
+  .detail__projectLink {
+    width: 25%;
+  }
+
+  .detail__projectLink:hover {
+    padding: 2rem 0 2rem calc((25% / 2) - (12.64rem / 2));
+  }
+}
+
+@media only screen and (max-width: 1010px) {
+
+  .detail__projectLink {
+    width: 28rem;
+    margin-top: 5rem;
+    padding: 2rem;
+  }
+
+  .detail__projectLink:hover {
+    padding: 2rem 0 2rem calc((28rem / 2) - (12.64rem / 2));
+  }
 
   .detail__info {
     display: block;
   }
 
-  .detail__projectLink {
-    justify-content: center;
-    margin-top: 5rem;
-    padding: 2rem;
+  .detail__infoList {
+    width: 80%;
   }
+
+}
+
+@media only screen and (max-width: 900px) {
 
   .detail__infoList {
     width: 100%;
@@ -234,5 +257,16 @@
 
   .detail__subtitle {
     font-size: 1.8rem;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+
+  .detail__projectLink {
+    width: 100%;
+  }
+
+  .detail__projectLink:hover {
+    padding: 2rem 0 2rem calc((100% / 2) - (12.64rem / 2));
   }
 }
