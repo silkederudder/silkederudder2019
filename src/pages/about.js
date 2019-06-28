@@ -10,6 +10,10 @@ import base from './base.module.css'
 import styles from './about.module.css'
 import Media from 'react-media';
 
+const initialState = {
+  show: 'false'
+};
+
 let img;
 const imgStyle = {
   position: `absolute`,
@@ -53,7 +57,7 @@ const AboutPage = (props) => {
 
         <article className={styles.info__about}>
           <h3 className={base.hide}>About</h3>
-          <Media query="(max-width: 900px)">
+          <Media query="(max-width: 900px)" defaultMatches={initialState.show === false}>
             {matches =>
               matches ? (
                 <>
