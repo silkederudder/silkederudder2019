@@ -52,10 +52,6 @@ a {
   transition: transform 1s cubic-bezier(.08, .82, .17, 1);
 }
 
-.info__img, .info__img > * {
-  transform: translateX(50%);
-}
-
 .index__projectImg {
   filter: brightness(75%);
 }

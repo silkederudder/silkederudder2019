@@ -27,7 +27,10 @@ const none = {
 
 const handleShowImg = e => {
   const $img = img.current.imageRef.current.offsetParent;
-  $img.style.transform = `translate3d(calc(${e.pageX}px - 100%), calc(${e.pageY}px - 100%), 0)`;
+  const offsetX = (window.innerWidth - document.querySelector('.wrapper').clientWidth) / 2;
+  const x = e.pageX - offsetX;
+  const y = e.pageY;
+  $img.style.transform = `translate3d(calc(${x}px - 50%), calc(${y}px - 100%), 0)`;
   $img.style.opacity = `.8`;
 }
 
