@@ -70,6 +70,10 @@ a {
   height: auto;
 }
 
+.tl-edges {
+  overflow: visible;
+}
+
 .tl-wrapper-status--entered main {
   transition: all .3s;
   transform: translateY(0);
@@ -92,7 +96,7 @@ a {
   }
 }
 
-@media only screen and (max-width: 760px) {
+@media only screen and (max-width: 760px) ti{
 
   .blocktext__img {
     width: 100%;

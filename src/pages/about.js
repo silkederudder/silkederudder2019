@@ -26,13 +26,12 @@ const none = {
 }
 
 const handleShowImg = e => {
-  
   const $img = img.current.imageRef.current.offsetParent;
-  $img.style.transform = `translate3d(calc(${e.pageX}px - 50%), calc(${e.pageY}px - 50%), 0)`;
+  $img.style.transform = `translate3d(calc(${e.pageX}px - 100%), calc(${e.pageY}px - 100%), 0)`;
   $img.style.opacity = `.8`;
 }
 
-const handleHideImage = e => {
+const handleHideImage = () => {
   const $img = img.current.imageRef.current.offsetParent;
   $img.style.opacity = `0`;
 }
