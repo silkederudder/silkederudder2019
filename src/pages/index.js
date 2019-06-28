@@ -3,6 +3,7 @@ import { graphql, Link } from "gatsby";
 import Layout from "../components/layout";
 import Helmet from 'react-helmet'
 import get from 'lodash/get'
+import TransitionLink from "gatsby-plugin-transition-link"
 import SEO from "../components/seo";
 import Img from "gatsby-image";
 import styles from './index.module.css'
@@ -35,7 +36,7 @@ const IndexPage = (props) => {
           {projects.map(({ node }) => {
             return (
               <li key={node.slug} className={styles.index__project}>
-                  <Link to={`/project/${node.slug}`} className={styles.index__projectLink}>
+                  <TransitionLink exit={{length: 1}} entry={{length: .5}} to={`/project/${node.slug}`} className={styles.index__projectLink}>
                     <article className={styles.index__projectItem} onMouseMove={handleTilt} onMouseLeave={handleReset}>
                       <div className={styles.index__overlay}></div>
                       <div className={styles.index__projectInfo}>
@@ -44,7 +45,7 @@ const IndexPage = (props) => {
                       </div>
                       <Img className="index__projectImg" alt={node.title} fluid={node.coverImage.fluid} />
                     </article>
-                  </Link>
+                  </TransitionLink>
               </li>
             )
           })}

@@ -5,6 +5,7 @@ import get from 'lodash/get'
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import BlockText from "../blocks/blockText"
+import TransitionLink from "gatsby-plugin-transition-link"
 import Img from "gatsby-image";
 import styles from './project.module.css'
 import base from '../pages/base.module.css'
@@ -21,7 +22,7 @@ class ProjectTemplate extends React.Component {
         <Helmet title={`${project.title} | ${siteTitle}`} />
         
         <section className={styles.close__right}>
-          <Link to="/" className={styles.detail__link}>Close project</Link>
+          <TransitionLink exit={{length: 1}} entry={{length: .5}} to="/" className={styles.detail__link}>Close project</TransitionLink>
         </section>
         <section className={styles.detail}>
           <h2 className={styles.detail__title}>{project.title}</h2>
@@ -72,7 +73,7 @@ class ProjectTemplate extends React.Component {
            { blocks.map((block, i) => <BlockText key={i} id={block.node}/>) }
         </section>
         <section className={styles.close__center}>
-          <Link to="/" className={styles.detail__link}>Close project</Link>
+          <TransitionLink exit={{length: 1}} entry={{length: .5}} to="/" className={styles.detail__link}>Close project</TransitionLink>
         </section>
       </Layout>
     )
