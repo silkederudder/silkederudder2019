@@ -24,6 +24,11 @@
   padding-bottom: .3rem;
 }
 
+.detail__link:hover {
+  opacity: 1;
+  transition: .2s all;
+}
+
 .detail__title {
   font-family: GTAmericaExpandedBlack;
   font-weight: bold;
@@ -40,7 +45,7 @@
   font-family: GTAmericaExtended;
   font-size: 3rem;
   line-height: 4.4rem;
-  margin-bottom: 4.9rem;
+  margin-bottom: 4.9rem
 }
 
 .detail__infoList {
@@ -61,13 +66,14 @@
 
 .detail__projectLink {
   font-family: GTAmericaExtended;
-  width: 22rem;
+  width: 25%;
   border: .1rem solid var(--grey);
   padding: 2rem;
   height: 1.4rem;
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: space-between;
+  transition: .2s all;
 }
 
 .detail__projectLink::after {
@@ -77,6 +83,18 @@
   width: 3.2rem;
   height: 1.4rem;
   margin-left: 1.2rem;
+  transition: .2s all;
+}
+
+.detail__projectLink:hover {
+  transition: .2s all;
+  border: .1rem solid white;
+  padding: 2rem 0 2rem calc((25% / 2) - (12.64rem / 2));
+}
+
+.detail__projectLink:hover::after {
+  opacity: 0;
+  transition: .2s all;
 }
 
 .detail__heading {

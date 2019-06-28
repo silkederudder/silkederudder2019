@@ -3,6 +3,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Helmet from 'react-helmet'
 import { graphql } from "gatsby";
+import PropTypes from "prop-types";
 import get from 'lodash/get'
 import Img from "gatsby-image";
 import base from './base.module.css'
@@ -19,6 +20,10 @@ const resetStyle = {
   transform: `none`,
   opacity: `1`,
 } 
+
+const none = {
+  display: `none`,
+}
 
 const handleShowImg = e => {
   
@@ -39,8 +44,8 @@ const AboutPage = (props) => {
 
   return (
     <Layout>
-      <SEO title="About" keywords={[`info`, `@ derudder`, `design`, `development`, `contact`, `creative`, `portfolio`]} />
-      <Helmet title='Info' />
+      <SEO title={`Info | ${siteTitle}`} keywords={[`info`, `silke derudder`, `design`, `development`, `contact`, `creative`, `portfolio`]} />
+      <Helmet title="Info" />
       <section className={styles.info}>
         <h2 className={base.hide}>Info</h2>
 
@@ -66,15 +71,15 @@ const AboutPage = (props) => {
           <h3 className={base.hide}>Get in touch</h3>
           <p className={styles.info__mail}>Send me an <br/> <a href="mailto:hello@silkederudder.be">email</a></p>
           <ul className={styles.info__socials}>
-            <div>
+            <div className={styles.info__socialsBlock1}>
               <li className={styles.info__socialItem}><a className={base.link} href="https://github.com/silkederudder">Github</a></li>
               <li className={styles.info__socialItem}><a className={base.link} href="https://linkedin.com/silkederudder">LinkedIn</a></li>
               <li className={styles.info__socialItem}><a className={base.link} href="https://www.behance.net/silkederudder">Behance</a></li>
             </div>
-            <div>
+            <div className={styles.info__socialsBlock2}>
               <li className={styles.info__socialItem}><a className={base.link} href="https://twitter.com/silkederudder">Twitter</a></li>
               <li className={styles.info__socialItem}><a className={base.link} href="https://instagram.com/silkederudder">Instagram</a></li>
-              <li className={styles.info__socialItem}><a className={base.link} href="">Resume</a></li>
+              <li className={styles.info__socialItem} style={none}><a className={base.link} href="">Resume</a></li>
             </div>
           </ul>
         </article>

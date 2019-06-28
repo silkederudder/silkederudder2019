@@ -47,7 +47,7 @@
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
-    "develop": "gatsby develop --host='192.168.1.44'",
+    "develop": "gatsby develop --host='192.168.2.240'",
     "format": "prettier --write src/**/*.{js,jsx}",
     "start": "yarn run develop",
     "serve": "gatsby serve",

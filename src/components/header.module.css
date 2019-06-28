@@ -29,6 +29,7 @@
 
 .header__link:hover {
   opacity: .7;
+  transition: .2s all;
 }
 
 @media only screen and (max-width: 760px) {
@@ -49,5 +50,4 @@
     margin-bottom: 4rem;
   }
 
-  
 }

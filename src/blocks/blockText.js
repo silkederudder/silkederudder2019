@@ -1,13 +1,12 @@
 import React from "react"
-import { graphql } from "gatsby";
-import get from 'lodash/get'
 import Img from "gatsby-image";
+import PropTypes from "prop-types";
 import styles from './blockText.module.css'
 import base from '../pages/base.module.css'
 
-const blockText = (props) => {
-  const block = get(props, 'id')
-  const images = get(props, 'id.images');
+const blockText = ({ id }) => {
+  const block = id;
+  const images = id.images;
 
   return (
     <article className={styles.blocktext}>
@@ -21,5 +20,9 @@ const blockText = (props) => {
     </article>
   )
 }
+
+blockText.propTypes = {
+  id: PropTypes.object.isRequired
+};
 
 export default blockText
