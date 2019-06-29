@@ -12,6 +12,7 @@ const blockText = ({ id }) => {
     <article className={styles.blocktext}>
       <header className={styles.blocktext__images}>
         {images.map((img, i) => <Img key={i} className="blocktext__img" alt={img.title} fluid={img.fluid}/>)}
+        {images.map((img, i) => <Img key={i} className="blocktext__img" alt={img.title} fluid={img.fluid}/>)}
       </header>
       <div className={styles.blocktext__body}>
         <h3 className={styles.blocktext__title}>{block.title}</h3>
