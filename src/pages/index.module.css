@@ -10,6 +10,7 @@
   max-width: 65rem;
   height: auto;
   position: relative;
+  margin-bottom: 1vw;
 }
 
 .index__projectInfo {
@@ -29,7 +30,7 @@
   top: 0;
   left: 0;
   z-index: 10;
-  background-image: linear-gradient(135deg, rgba(0, 0, 0, 65%) 0%, rgba(59, 11, 19, 65%) 100%);
+  background-image: linear-gradient(135deg, rgba(0, 0, 0, 65%) 0%, rgba(0, 0, 0, 50%) 100%);
   transition: opacity .2s ease-in-out;
   opacity: 0;
 }
