@@ -19,7 +19,7 @@ class ProjectTemplate extends React.Component {
     return (
       <Layout>
         <SEO title="Info" keywords={[`project`, `silke derudder`, `design`, `development`, `contact`, `creative`, `portfolio`]} />
-        <Helmet title={`${project.title} | ${siteTitle}`} />
+        <Helmet title={`${project.title}`} />
         
         <section className={styles.close__right}>
           <TransitionLink exit={{length: 1}} entry={{length: .5}} to="/" className={styles.detail__link}>Close project</TransitionLink>
