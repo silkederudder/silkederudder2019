@@ -10,11 +10,13 @@ import styles from './index.module.css'
 import base from './base.module.css'
 
 const handleTilt = (e) => {
-  const max = 5;
-  const w = e.currentTarget.clientWidth;
-  const h = e.currentTarget.clientHeight;
+  const w = e.currentTarget.getBoundingClientRect().width;
+  const h = e.currentTarget.getBoundingClientRect().height;
+  const x = (e.clientX - e.currentTarget.getBoundingClientRect().x) - (w/ 2);
+  const y = (e.clientY - e.currentTarget.getBoundingClientRect().y) - (h / 2);
+  const max = 100;
 
-  e.currentTarget.style = `will-change: transform; transform: perspective(1000px) rotateY(${(e.pageX / w) * max}deg) rotateX(${(e.pageY / h) * max}deg) scale3d(.9, .9, .9);`;
+  e.currentTarget.style = `will-change: transform; transform: perspective(${h}px) rotateX(${x / max}deg) rotateY(${y / max}deg) scale3d(.9, .9, .9);`;
 }
 
 const handleReset = (e) => {
