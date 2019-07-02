@@ -14,9 +14,8 @@ const handleTilt = (e) => {
   const h = e.currentTarget.getBoundingClientRect().height;
   const x = (e.clientX - e.currentTarget.getBoundingClientRect().x) - (w/ 2);
   const y = (e.clientY - e.currentTarget.getBoundingClientRect().y) - (h / 2);
-  const max = 100;
 
-  e.currentTarget.style = `will-change: transform; transform: perspective(${h}px) rotateX(${x / max}deg) rotateY(${y / max}deg) scale3d(.9, .9, .9);`;
+  e.currentTarget.style = `will-change: transform; transform: perspective(${h}px) rotateX(${-y / h}deg) rotateY(${x / h}deg) scale3d(.9, .9, .9);`;
 }
 
 const handleReset = (e) => {
